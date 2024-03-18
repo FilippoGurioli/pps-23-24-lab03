@@ -5,6 +5,7 @@ import u02.Modules.Person
 import u03.Sequences.Sequence.*
 import org.junit.Test
 import org.junit.Assert.*
+import task.part2.Sequences.coursesWithExtension
 
 class CoursesTest {
 
@@ -30,5 +31,8 @@ class CoursesTest {
 
     @Test def withNil() = 
         assertEquals(Nil(), Sequences.courses(Nil()))
+
+    @Test def withExtension() =
+        assertEquals(Cons("PPS", Cons("OOP", Nil())), persons.coursesWithExtension())
 }
     
